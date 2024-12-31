@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-model</title>
+    <style>
+        .dummy {
+            height: 100px;
+            aspect-ratio: 1/1;
+            background-color: blue;
+            margin-top: 20px;
+        }
+        
+        .outerbox {
+            margin: auto;
+            border: 1px solid;
+            height: 300px;
+            width: 300px;
+            box-sizing: border-box;
+            /*padding-top: 50px;*/
+            background-color: rgb(36, 211, 153);
+
+            .innerbox {
+                border: 1px solid;
+                height: 200px;
+                width: 200px;
+                box-sizing: border-box;
+                margin-left: 50px;
+                /*margin:auto;*/
+                margin-top: 50px;
+                background-color: yellowgreen;
+
+               /*position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);*/
+                position: relative;
+                /*top: 10px;*/
+
+                
+                img{
+                    height: 40%;
+                    aspect-ratio : 1/1; /*width/height*/
+                    object-fit: cover;
+                    border: 1px solid;
+
+                   position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outerbox">
+        <div class="innerbox">
+            <!--There is nothing in here -->
+            <img src="images\figures\img1.jpg" alt="">
+        </div>
+    </div>
+    <div class="dummy">
+    </div>
+    <div class="dummy">
+    </div>
+    <div class="dummy">
+    </div>
+    <div class="dummy">
+    </div>
+
+</body>
+</html>
